@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="uz" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>BMW Avtosalon</title>
+<script>try{var th=localStorage.getItem("bmwTheme");if(th)document.documentElement.setAttribute("data-theme",th)}catch(e){}</script>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-cart" viewBox="0 0 24 24"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.7 13.4a2 2 0 0 0 2 1.6h9.7a2 2 0 0 0 2-1.6L23 6H6"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><path d="M4 4h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z"/><polyline points="22,6 12,13 2,6"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="M22 11.1V12a10 10 0 1 1-5.9-9.1"/><polyline points="22 4 12 14 9 11"/></symbol>
+  <symbol id="i-users" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.9"/><path d="M16 3.1a4 4 0 0 1 0 7.8"/></symbol>
+  <symbol id="i-home" viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></symbol>
+  <symbol id="i-star" viewBox="0 0 24 24"><polygon points="12 2 15.1 8.6 22 9.3 17 14.1 18.2 21 12 17.8 5.8 21 7 14.1 2 9.3 8.9 8.6 12 2"/></symbol>
+  <symbol id="i-zap" viewBox="0 0 24 24"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></symbol>
+  <symbol id="i-card" viewBox="0 0 24 24"><rect x="1" y="4" width="22" height="16" rx="2"/><line x1="1" y1="10" x2="23" y2="10"/></symbol>
+  <symbol id="i-car" viewBox="0 0 24 24"><path d="M3 17h18v-4l-2-6a2 2 0 0 0-2-1H7a2 2 0 0 0-2 1l-2 6z"/><circle cx="7.5" cy="17" r="1.8"/><circle cx="16.5" cy="17" r="1.8"/></symbol>
+  <symbol id="i-wrench" viewBox="0 0 24 24"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 0 0 5.4-5.4l-2.5 2.5-2.4-.6-.6-2.4z"/></symbol>
+  <symbol id="i-trash" viewBox="0 0 24 24"><polyline points="3 6 5 6 21 6"/><path d="M19 6l-1 14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2L5 6"/><path d="M10 11v6M14 11v6M9 6V4h6v2"/></symbol>
+  <symbol id="i-send" viewBox="0 0 24 24"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></symbol>
+  <symbol id="i-drive" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="3"/><path d="M12 2v7M12 15v7M2.5 10l6.8 1.5M14.7 12.5l6.8 1.5"/></symbol>
+  <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.2 4.2l1.4 1.4M18.4 18.4l1.4 1.4M1 12h2M21 12h2M4.2 19.8l1.4-1.4M18.4 5.6l1.4-1.4"/></symbol>
+  <symbol id="i-moon" viewBox="0 0 24 24"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></symbol>
+  <symbol id="i-chat" viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></symbol>
+  <symbol id="i-left" viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></symbol>
+  <symbol id="i-right" viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></symbol>
+  <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></symbol>
+  <symbol id="i-play" viewBox="0 0 24 24"><polygon points="6 3 20 12 6 21 6 3"/></symbol>
+</svg>
+
+<header class="header" id="header">
+  <a href="#home" class="logo"><span class="logo-mark"></span>BMW Salon</a>
+  <nav class="nav" id="nav">
+    <ul>
+      <li><a href="#home" class="active" data-i18n="home">Bosh sahifa</a></li>
+      <li><a href="#about" data-i18n="about">Biz haqimizda</a></li>
+      <li><a href="#products" data-i18n="products">Mahsulotlar</a></li>
+      <li><a href="#calc" data-i18n="calcNav"></a></li>
+      <li><a href="#branches" data-i18n="branches">Filiallar</a></li>
+      <li><a href="#contact" data-i18n="contact">Aloqa</a></li>
+    </ul>
+  </nav>
+  <div class="head-actions">
+    <select class="hbtn hbtn-lang" id="lang" aria-label="Til / Language">
+      <option value="uz">UZ</option><option value="ru">RU</option><option value="en">EN</option>
+    </select>
+    <button class="hbtn hbtn-theme" id="themeBtn" data-i18n-aria="themeAria"><svg class="ic" id="themeIcon"><use href="#i-sun"/></svg></button>
+    <button class="hbtn hbtn-history" id="historyOpen"><svg class="ic"><use href="#i-clock"/></svg><span class="label" data-i18n="history">Tarix</span><span class="badge" id="historyCount">0</span></button>
+    <button class="hbtn hbtn-cart" id="cartOpen"><svg class="ic"><use href="#i-cart"/></svg><span class="label" data-i18n="cart">Savat</span><span class="badge" id="cartCount">0</span></button>
+    <button class="burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<main>
+  <section class="hero" id="home">
+    <div class="wrap hero-inner">
+      <div class="hero-text">
+        <h1 data-i18n="heroH"></h1>
+        <p data-i18n="heroP"></p>
+        <div class="hero-actions">
+          <a href="#products" class="btn btn-primary"><svg class="ic"><use href="#i-car"/></svg><span data-i18n="heroB1"></span></a>
+          <a href="#contact" class="btn btn-amber"><svg class="ic"><use href="#i-drive"/></svg><span data-i18n="heroB2"></span></a>
+        </div>
+      </div>
+      <div class="hero-cars" id="heroCars"></div>
+    </div>
+    <div class="stripe"><i></i><i></i><i></i></div>
+  </section>
+
+  <section class="section about" id="about">
+    <div class="wrap">
+      <h2 data-i18n="aboutT"></h2>
+      <p class="sub" data-i18n="aboutS"></p>
+      <div class="features">
+        <div class="feature"><div class="f-ic"><svg class="ic"><use href="#i-shield"/></svg></div><h3 data-i18n="f1t"></h3><p data-i18n="f1p"></p></div>
+        <div class="feature"><div class="f-ic f-green"><svg class="ic"><use href="#i-check"/></svg></div><h3 data-i18n="f2t"></h3><p data-i18n="f2p"></p></div>
+        <div class="feature"><div class="f-ic f-amber"><svg class="ic"><use href="#i-wrench"/></svg></div><h3 data-i18n="f3t"></h3><p data-i18n="f3p"></p></div>
+        <div class="feature"><div class="f-ic f-red"><svg class="ic"><use href="#i-star"/></svg></div><h3 data-i18n="f4t"></h3><p data-i18n="f4p"></p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="stats-band" id="stats">
+    <div class="wrap stats-grid">
+      <div class="stat"><svg class="ic"><use href="#i-car"/></svg><b data-count="sold">0</b><span data-i18n="stSold"></span></div>
+      <div class="stat"><svg class="ic"><use href="#i-home"/></svg><b data-count="branches">0</b><span data-i18n="stBranch"></span></div>
+      <div class="stat"><svg class="ic"><use href="#i-users"/></svg><b data-count="2900">0</b><span data-i18n="stClients"></span></div>
+      <div class="stat"><svg class="ic"><use href="#i-star"/></svg><b data-count="15">0</b><span data-i18n="stYears"></span></div>
+    </div>
+  </section>
+
+  <section class="section featured" id="featured">
+    <div class="wrap">
+      <h2 data-i18n="featT"></h2>
+      <p class="sub" data-i18n="featS"></p>
+      <div class="carousel" id="carousel">
+        <div class="viewport"><div class="track" id="track"></div><div class="progress"><i id="progressBar"></i></div></div>
+        <button class="arrow prev" id="prev" data-i18n-aria="prevAria"><svg class="ic"><use href="#i-left"/></svg></button>
+        <button class="arrow next" id="next" data-i18n-aria="nextAria"><svg class="ic"><use href="#i-right"/></svg></button>
+        <div class="dots" id="dots"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section products" id="products">
+    <div class="wrap">
+      <h2 data-i18n="prodT"></h2>
+      <p class="sub" data-i18n="prodS"></p>
+      <div class="toolbar">
+        <div class="filters" id="filters">
+        <button class="chip active" data-filter="all" data-i18n="all"></button>
+        <button class="chip" data-filter="Sedan" data-i18n="Sedan"></button>
+        <button class="chip" data-filter="SUV" data-i18n="SUV"></button>
+        <button class="chip" data-filter="Sport" data-i18n="Sport"></button>
+        <button class="chip" data-filter="Elektr" data-i18n="Elektr"></button>
+      </div>
+        <label class="searchbox"><svg class="ic"><use href="#i-search"/></svg><input type="search" id="search" data-i18n-ph="searchPh" autocomplete="off"></label>
+      </div>
+      <div class="grid" id="grid"></div>
+    </div>
+  </section>
+
+  <section class="section calc" id="calc">
+    <div class="wrap">
+      <h2 data-i18n="calcT"></h2>
+      <p class="sub" data-i18n="calcS"></p>
+      <div class="calc-grid">
+        <div class="calc-form">
+          <label><span data-i18n="cCar"></span><select id="calcCar"></select></label>
+          <label><span><span data-i18n="cDown"></span><b id="vDown"></b></span><input type="range" id="calcDown" min="0" max="70" step="5" value="20"></label>
+          <label><span><span data-i18n="cTerm"></span><b id="vTerm"></b></span><input type="range" id="calcTerm" min="6" max="84" step="6" value="36"></label>
+          <label><span><span data-i18n="cRate"></span><b id="vRate"></b></span><input type="range" id="calcRate" min="0" max="30" step="0.5" value="15"></label>
+        </div>
+        <div class="calc-result">
+          <div class="calc-monthly"><small data-i18n="cMonthly"></small><div id="rMonthly">$0</div></div>
+          <div class="calc-bar" id="calcBar"><i class="b-down"></i><i class="b-loan"></i><i class="b-int"></i></div>
+          <ul class="calc-legend" id="calcLegend"></ul>
+          <div class="calc-rows" id="calcRows"></div>
+          <div class="card-actions">
+            <button class="btn btn-red" id="calcBuy" data-buy="1"><svg class="ic"><use href="#i-card"/></svg><span data-i18n="buy"></span></button>
+            <button class="btn btn-green" id="calcAdd" data-add="1"><svg class="ic"><use href="#i-cart"/></svg><span data-i18n="addCart"></span></button>
+          </div>
+          <p class="note" data-i18n="calcNote"></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section branches" id="branches">
+    <div class="wrap">
+      <h2 data-i18n="brT"></h2>
+      <p class="sub" data-i18n="brS"></p>
+      <div class="branch-grid" id="branchGrid"></div>
+    </div>
+  </section>
+
+  <section class="section video" id="promo">
+    <div class="wrap">
+      <h2 data-i18n="videoT"></h2>
+      <p class="sub" data-i18n="videoS"></p>
+      <div class="video-box" id="videoBox" role="button" tabindex="0" aria-label="Play video">
+        <img id="videoPoster" alt="BMW">
+        <span class="play"><svg class="ic"><use href="#i-play"/></svg></span>
+        <div class="video-cap"><b data-i18n="videoCap"></b></div>
+      </div>
+      <div class="video-foot">
+        <a class="btn btn-red" id="ytLink" target="_blank" rel="noopener"><svg class="ic"><use href="#i-play"/></svg><span data-i18n="videoOpen"></span></a>
+        <p class="note" data-i18n="videoNote"></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section contact" id="contact">
+    <div class="wrap">
+      <h2 data-i18n="conT"></h2>
+      <div class="contact-grid">
+        <div class="contact-info">
+          <div class="ci"><span class="ci-ic"><svg class="ic"><use href="#i-pin"/></svg></span><div><b data-i18n="cOffice"></b><p data-i18n="cOfficeV"></p></div></div>
+          <div class="ci"><span class="ci-ic"><svg class="ic"><use href="#i-phone"/></svg></span><div><b data-i18n="cPhone"></b><p>+998 90 123 45 67</p></div></div>
+          <div class="ci"><span class="ci-ic"><svg class="ic"><use href="#i-mail"/></svg></span><div><b data-i18n="cEmail"></b><p>info@bmwsalon.uz</p></div></div>
+          <div class="ci"><span class="ci-ic"><svg class="ic"><use href="#i-clock"/></svg></span><div><b data-i18n="cHours"></b><p data-i18n="cHoursV"></p></div></div>
+        </div>
+        <form id="contactForm" class="form">
+          <input type="text" id="cName" data-i18n-ph="phName" required>
+          <input type="tel" id="cPhone" data-i18n-ph="phPhone" required>
+          <textarea id="cMsg" rows="5" data-i18n-ph="phMsg" required></textarea>
+          <button type="submit" class="btn btn-green"><svg class="ic"><use href="#i-send"/></svg><span data-i18n="sendBtn"></span></button>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="f-col">
+        <a href="#home" class="logo"><span class="logo-mark"></span>BMW Salon</a>
+        <p data-i18n="fDesc"></p>
+        <div class="socials"><a href="#" aria-label="Telegram">Tg</a><a href="#" aria-label="Instagram">Ig</a><a href="#" aria-label="Facebook">Fb</a><a href="#" aria-label="YouTube">Yt</a></div>
+      </div>
+      <div class="f-col">
+        <h4 data-i18n="fPages"></h4>
+        <ul>
+          <li><a href="#home" data-i18n="home"></a></li>
+          <li><a href="#about" data-i18n="about"></a></li>
+          <li><a href="#products" data-i18n="products"></a></li>
+      <li><a href="#calc" data-i18n="calcNav"></a></li>
+          <li><a href="#branches" data-i18n="branches"></a></li>
+          <li><a href="#contact" data-i18n="contact"></a></li>
+        </ul>
+      </div>
+      <div class="f-col">
+        <h4 data-i18n="fModels"></h4>
+        <ul>
+          <li><a href="#products" data-i18n="Sedan"></a></li>
+          <li><a href="#products" data-i18n="SUV"></a></li>
+          <li><a href="#products" data-i18n="Sport"></a></li>
+          <li><a href="#products" data-i18n="Elektr"></a></li>
+        </ul>
+      </div>
+      <div class="f-col">
+        <h4 data-i18n="fConnect"></h4>
+        <ul class="f-contact">
+          <li><svg class="ic"><use href="#i-pin"/></svg><span data-i18n="fAddr"></span></li>
+          <li><svg class="ic"><use href="#i-phone"/></svg>+998 90 123 45 67</li>
+          <li><svg class="ic"><use href="#i-mail"/></svg>info@bmwsalon.uz</li>
+          <li><svg class="ic"><use href="#i-clock"/></svg><span data-i18n="cHoursV"></span></li>
+        </ul>
+      </div>
+    </div>
+    <p class="copy" data-i18n="copy"></p>
+    <p class="copy credit" data-i18n="photoCredit"></p>
+  </div>
+</footer>
+
+<!-- Savat -->
+<div class="overlay" id="overlay"></div>
+<aside class="drawer" id="drawer" aria-hidden="true">
+  <div class="drawer-head"><h3 data-i18n="cartT"></h3><button class="close" id="cartClose" aria-label="Close">&times;</button></div>
+  <div class="drawer-body" id="cartItems"></div>
+  <div class="drawer-foot">
+    <div class="total"><span data-i18n="total"></span><b id="cartTotal">$0</b></div>
+    <button class="btn btn-green full" id="checkout"><svg class="ic"><use href="#i-card"/></svg><span data-i18n="checkout"></span></button>
+    <button class="btn btn-red full" id="clearCart"><svg class="ic"><use href="#i-trash"/></svg><span data-i18n="clearCart"></span></button>
+  </div>
+</aside>
+
+<!-- Tarix -->
+<div class="modal" id="history">
+  <div class="modal-box wide">
+    <div class="drawer-head"><h3 data-i18n="histT"></h3><button class="close" id="historyClose" aria-label="Close">&times;</button></div>
+    <div class="tabs">
+      <button class="tab active" data-tab="mine" data-i18n="tabMine"></button>
+      <button class="tab" data-tab="recent" data-i18n="tabRecent"></button>
+    </div>
+    <div class="tab-body" id="historyBody"></div>
+    <div class="history-foot" id="historyFoot"></div>
+  </div>
+</div>
+
+<!-- Xabar -->
+<div class="modal" id="modal">
+  <div class="modal-box">
+    <div class="check"><svg class="ic"><use href="#i-check"/></svg></div>
+    <h3 id="modalTitle"></h3>
+    <p id="modalText"></p>
+    <button class="btn btn-primary" id="modalClose" data-i18n="ok"></button>
+  </div>
+</div>
+
+<!-- Jonli chat -->
+<div class="chat" id="chat">
+  <div class="chat-panel" id="chatPanel">
+    <div class="chat-head">
+      <span class="avatar"><svg class="ic"><use href="#i-users"/></svg></span>
+      <div><b data-i18n="chatT"></b><small><i class="dot"></i><span data-i18n="chatOnline"></span></small></div>
+      <button class="close" id="chatClose" aria-label="Close">&times;</button>
+    </div>
+    <div class="chat-body" id="chatBody"></div>
+    <form class="chat-form" id="chatForm">
+      <input type="text" id="chatInput" data-i18n-ph="chatPh" autocomplete="off">
+      <button type="submit" class="send" aria-label="Send"><svg class="ic"><use href="#i-send"/></svg></button>
+    </form>
+  </div>
+  <button class="chat-fab" id="chatFab" aria-label="Chat"><svg class="ic"><use href="#i-chat"/></svg><i class="ping"></i></button>
+</div>
+
+<div class="toast" id="toast"></div>
+<script src="lang.js"></script>
+<script src="lang2.js"></script>
+<script src="data.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
