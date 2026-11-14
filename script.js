@@ -20,11 +20,11 @@ const city = (i) => cityNames[lang][i];
 
 function applyI18n() {
   document.documentElement.lang = lang;
-  document.querySelectorAll("[data-i18n]").forEach(el => { el.textContent = t(el.dataset.i18n, { n: branches.length }); });
+  document.querySelectorAll("[data-i18n]").forEach(el => { el.textContent = t(el.dataset.i18n, { n: el.dataset.n || branches.length }); });
   document.querySelectorAll("[data-i18n-ph]").forEach(el => { el.placeholder = t(el.dataset.i18nPh); });
   document.querySelectorAll("[data-i18n-aria]").forEach(el => { el.setAttribute("aria-label", t(el.dataset.i18nAria)); });
   $("#lang").value = lang;
-  renderHero(); renderProducts(); renderCalc(); renderBranches(); renderCarousel(); renderCart(); renderHistory();
+  renderHero(); renderProducts(); renderCalc(); renderCompare(); renderBranches(); renderCarousel(); renderCart(); renderHistory();
   if (window.onLang) onLang();
 }
 $("#lang").addEventListener("change", e => { lang = e.target.value; store("bmwLang", lang); applyI18n(); });
@@ -186,6 +186,58 @@ function renderCalc() {
   $("#calcAdd").dataset.add = p.id;
 }
 initCalc();
+
+// ---------- Mashinalarni taqqoslash ----------
+const cmpDefault = [3, 9, 11];
+function initCompare() {
+  if (!$("#cmpTable")) return;
+  [1, 2, 3].forEach((n, i) => {
+    const sel = $("#cmp" + n);
+    sel.innerHTML = (n === 3 ? '<option value="" data-i18n="cmpNone"></option>' : "") + products.map(p => `<option value="${p.id}">${p.name}</option>`).join("");
+    sel.value = cmpDefault[i];
+    sel.addEventListener("change", renderCompare);
+  });
+}
+function renderCompare() {
+  const box = $("#cmpTable");
+  if (!box) return;
+  const cars = [1, 2, 3].map(n => $("#cmp" + n).value).filter(Boolean).map(find);
+  const fuelKey = { petrol: "vPetrol", hybrid: "vHybrid", electric: "vElectric" };
+  const rows = [
+    { k: "price",   get: p => p.price, show: p => money(p.price), best: "min" },
+    { k: "sPower",  get: p => p.hp,    show: p => `${p.hp} ${t("hp")}`, best: "max" },
+    { k: "sTorque", get: p => p.nm,    show: p => `${p.nm} ${t("uNm")}`, best: "max" },
+    { k: "sAccel",  get: p => p.acc,   show: p => `${p.acc} ${t("uS")}`, best: "min" },
+    { k: "sTop",    get: p => p.top,   show: p => `${p.top} ${t("uKmh")}`, best: "max" },
+    { k: "sCons",   get: p => p.cons,  show: p => `${p.cons} ${t(p.fuel === "electric" ? "uKwh" : "uL")}`, best: "min", sameFuel: true },
+    { k: "sSeats",  get: p => p.seats, show: p => p.seats, best: "max" },
+    { k: "sDrive",  show: p => t("d" + p.drive) },
+    { k: "sFuel",   show: p => t(fuelKey[p.fuel]) },
+    { k: "sBody",   show: p => t(p.cat) },
+    { k: "sYear",   show: p => p.year }
+  ];
+  const mixedFuel = new Set(cars.map(p => p.fuel === "electric")).size > 1;
+  let html = `<div class="cmp-head">${t("cmpBest")}</div>` + cars.map(p => `
+    <div class="cmp-car">
+      <a class="photo-box" href="${carLink(p)}">${carImg(p)}</a>
+      <h3>${p.name}</h3>
+      <a class="btn btn-primary" href="${carLink(p)}">${t("details")} ${ic("right")}</a>
+      <button class="btn btn-green" data-add="${p.id}">${ic("cart")} ${t("addCart")}</button>
+    </div>`).join("");
+  rows.forEach(r => {
+    let bestVal = null;
+    if (r.best && !(r.sameFuel && mixedFuel)) {
+      const vals = cars.map(r.get);
+      const b = r.best === "min" ? Math.min(...vals) : Math.max(...vals);
+      if (vals.some(v => v !== b)) bestVal = b;
+    }
+    html += `<div class="cmp-label">${t(r.k)}</div>` + cars.map(p =>
+      `<div class="cmp-cell${bestVal !== null && r.get(p) === bestVal ? " best" : ""}">${r.show(p)}</div>`).join("");
+  });
+  box.style.setProperty("--cols", cars.length);
+  box.innerHTML = html;
+}
+initCompare();
 
 // ---------- Filiallar ----------
 function renderBranches() {
@@ -455,22 +507,6 @@ const headerEl = $("#header");
 const onScroll = () => headerEl.classList.toggle("scrolled", window.scrollY > 30);
 window.addEventListener("scroll", onScroll);
 onScroll();
-
-// ---------- Reklama videosi (YouTube) ----------
-const vbox = $("#videoBox");
-if (vbox) {
-  const id = PROMO_VIDEO_ID, poster = $("#videoPoster");
-  poster.src = `https://img.youtube.com/vi/${id}/maxresdefault.jpg`;
-  poster.onerror = () => { poster.onerror = () => { poster.style.display = "none"; }; poster.src = `https://img.youtube.com/vi/${id}/hqdefault.jpg`; };
-  $("#ytLink").href = `https://www.youtube.com/watch?v=${id}`;
-  const play = () => {
-    if (vbox.classList.contains("playing")) return;
-    vbox.classList.add("playing");
-    vbox.innerHTML = `<iframe src="https://www.youtube-nocookie.com/embed/${id}?autoplay=1&rel=0&modestbranding=1" title="BMW" allow="accelerometer; autoplay; encrypted-media; picture-in-picture; fullscreen" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe>`;
-  };
-  vbox.addEventListener("click", play);
-  vbox.addEventListener("keydown", e => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); play(); } });
-}
 
 applyI18n();
 setActive();

@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>BMW Avtosalon</title>
+<title>Bavaria Motors | BMW avtosalon</title>
 <script>try{var th=localStorage.getItem("bmwTheme");if(th)document.documentElement.setAttribute("data-theme",th)}catch(e){}</script>
 <link rel="stylesheet" href="style.css">
 </head>
@@ -37,7 +37,7 @@
 </svg>
 
 <header class="header" id="header">
-  <a href="#home" class="logo"><span class="logo-mark"></span>BMW Salon</a>
+  <a href="#home" class="logo"><span class="logo-mark"></span>Bavaria Motors</a>
   <nav class="nav" id="nav">
     <ul>
       <li><a href="#home" class="active" data-i18n="home">Bosh sahifa</a></li>
@@ -118,7 +118,6 @@
         <div class="filters" id="filters">
         <button class="chip active" data-filter="all" data-i18n="all"></button>
         <button class="chip" data-filter="Sedan" data-i18n="Sedan"></button>
-        <button class="chip" data-filter="SUV" data-i18n="SUV"></button>
         <button class="chip" data-filter="Sport" data-i18n="Sport"></button>
         <button class="chip" data-filter="Elektr" data-i18n="Elektr"></button>
       </div>
@@ -162,19 +161,16 @@
     </div>
   </section>
 
-  <section class="section video" id="promo">
+  <section class="section compare" id="compare">
     <div class="wrap">
-      <h2 data-i18n="videoT"></h2>
-      <p class="sub" data-i18n="videoS"></p>
-      <div class="video-box" id="videoBox" role="button" tabindex="0" aria-label="Play video">
-        <img id="videoPoster" alt="BMW">
-        <span class="play"><svg class="ic"><use href="#i-play"/></svg></span>
-        <div class="video-cap"><b data-i18n="videoCap"></b></div>
+      <h2 data-i18n="cmpT"></h2>
+      <p class="sub" data-i18n="cmpS"></p>
+      <div class="cmp-pickers">
+        <label><span data-i18n="cmpCar" data-n="1"></span><select id="cmp1"></select></label>
+        <label><span data-i18n="cmpCar" data-n="2"></span><select id="cmp2"></select></label>
+        <label><span data-i18n="cmpCar" data-n="3"></span><select id="cmp3"></select></label>
       </div>
-      <div class="video-foot">
-        <a class="btn btn-red" id="ytLink" target="_blank" rel="noopener"><svg class="ic"><use href="#i-play"/></svg><span data-i18n="videoOpen"></span></a>
-        <p class="note" data-i18n="videoNote"></p>
-      </div>
+      <div class="cmp-scroll"><div class="cmp-grid" id="cmpTable"></div></div>
     </div>
   </section>
 
@@ -185,7 +181,7 @@
         <div class="contact-info">
           <div class="ci"><span class="ci-ic"><svg class="ic"><use href="#i-pin"/></svg></span><div><b data-i18n="cOffice"></b><p data-i18n="cOfficeV"></p></div></div>
           <div class="ci"><span class="ci-ic"><svg class="ic"><use href="#i-phone"/></svg></span><div><b data-i18n="cPhone"></b><p>+998 90 123 45 67</p></div></div>
-          <div class="ci"><span class="ci-ic"><svg class="ic"><use href="#i-mail"/></svg></span><div><b data-i18n="cEmail"></b><p>info@bmwsalon.uz</p></div></div>
+          <div class="ci"><span class="ci-ic"><svg class="ic"><use href="#i-mail"/></svg></span><div><b data-i18n="cEmail"></b><p>info@bavariamotors.uz</p></div></div>
           <div class="ci"><span class="ci-ic"><svg class="ic"><use href="#i-clock"/></svg></span><div><b data-i18n="cHours"></b><p data-i18n="cHoursV"></p></div></div>
         </div>
         <form id="contactForm" class="form">
@@ -203,7 +199,7 @@
   <div class="wrap">
     <div class="footer-grid">
       <div class="f-col">
-        <a href="#home" class="logo"><span class="logo-mark"></span>BMW Salon</a>
+        <a href="#home" class="logo"><span class="logo-mark"></span>Bavaria Motors</a>
         <p data-i18n="fDesc"></p>
         <div class="socials"><a href="#" aria-label="Telegram">Tg</a><a href="#" aria-label="Instagram">Ig</a><a href="#" aria-label="Facebook">Fb</a><a href="#" aria-label="YouTube">Yt</a></div>
       </div>
@@ -222,7 +218,6 @@
         <h4 data-i18n="fModels"></h4>
         <ul>
           <li><a href="#products" data-i18n="Sedan"></a></li>
-          <li><a href="#products" data-i18n="SUV"></a></li>
           <li><a href="#products" data-i18n="Sport"></a></li>
           <li><a href="#products" data-i18n="Elektr"></a></li>
         </ul>
@@ -232,7 +227,7 @@
         <ul class="f-contact">
           <li><svg class="ic"><use href="#i-pin"/></svg><span data-i18n="fAddr"></span></li>
           <li><svg class="ic"><use href="#i-phone"/></svg>+998 90 123 45 67</li>
-          <li><svg class="ic"><use href="#i-mail"/></svg>info@bmwsalon.uz</li>
+          <li><svg class="ic"><use href="#i-mail"/></svg>info@bavariamotors.uz</li>
           <li><svg class="ic"><use href="#i-clock"/></svg><span data-i18n="cHoursV"></span></li>
         </ul>
       </div>

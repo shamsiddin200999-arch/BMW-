@@ -1,7 +1,7 @@
 // Qo'shimcha matnlar (qidiruv va mashina sahifasi)
 Object.assign(dict.uz, {
-  calcNav:"Kredit", calcT:"Kredit kalkulyatori", calcS:"Mashinani tanlang va oylik to'lovni hisoblang.", cCar:"Mashina", cDown:"Boshlang'ich to'lov", cTerm:"Muddat", cRate:"Yillik foiz", cMonths:"{n} oy", cMonthly:"Oylik to'lov", cPrice:"Mashina narxi", cDownAmt:"Boshlang'ich to'lov", cLoan:"Kredit summasi", cTotal:"Kredit bo'yicha jami to'lov", cOver:"Ortiqcha to'lov (foiz)", cBarDown:"Boshlang'ich", cBarLoan:"Asosiy qarz", cBarInt:"Foiz", calcLink:"Kreditni hisoblash", calcNote:"Hisob-kitob taxminiy (annuitet to'lov). Haqiqiy shartlar bankka bog'liq.",
-  videoT:"Reklama videosi", videoS:"BMW ning rasmiy brend filmini tomosha qiling.", videoCap:"BMW iX3: «The first of a new era» rasmiy brend filmi", videoOpen:"YouTube'da ochish", videoNote:"Video shu yerda ochilmasa, YouTube tugmasini bosing.",
+  cmpT:"Mashinalarni taqqoslash", cmpS:"2 yoki 3 ta mashinani tanlang va ko'rsatkichlarini yonma-yon ko'ring.", cmpNone:"— tanlanmagan —", cmpCar:"{n}-mashina", cmpBest:"Eng yaxshi ko'rsatkich yashil rangda belgilanadi.",
+  calcNav:"Muddatli to'lov", calcT:"Muddatli to'lov kalkulyatori", calcS:"Mashinani tanlang va oylik to'lovni hisoblang.", cCar:"Mashina", cDown:"Boshlang'ich to'lov", cTerm:"Muddat", cRate:"Yillik foiz", cMonths:"{n} oy", cMonthly:"Oylik to'lov", cPrice:"Mashina narxi", cDownAmt:"Boshlang'ich to'lov", cLoan:"Bo'lib to'lanadigan summa", cTotal:"Muddatli to'lov bo'yicha jami", cOver:"Ortiqcha to'lov (ustama)", cBarDown:"Boshlang'ich", cBarLoan:"Bo'lib to'lanadigan qism", cBarInt:"Ustama", calcLink:"Muddatli to'lovni hisoblash", calcNote:"Hisob-kitob taxminiy. Haqiqiy shartlar sotuvchi bilan kelishiladi.",
   photoCredit:"Mashina rasmlari: Wikimedia Commons (ochiq litsenziyalar, mualliflari o'sha saytda ko'rsatilgan).",
   searchPh:"Mashina qidirish...", noResults:"Hech narsa topilmadi. Boshqa nom bilan qidirib ko'ring.", details:"Batafsil",
   back:"Barcha mashinalar", price:"Narxi", monthly:"Taxminan {m}/oy (36 oy muddatga)", specsT:"Texnik xususiyatlari", similarT:"O'xshash mashinalar",
@@ -15,8 +15,8 @@ Object.assign(dict.uz, {
   desc_Elektr:"Ovozsiz va tejamkor elektromobil: nol chiqindi, bir zumda tezlanish va uzoq yurish masofasi."
 });
 Object.assign(dict.ru, {
-  calcNav:"Кредит", calcT:"Кредитный калькулятор", calcS:"Выберите автомобиль и рассчитайте ежемесячный платёж.", cCar:"Автомобиль", cDown:"Первоначальный взнос", cTerm:"Срок", cRate:"Годовая ставка", cMonths:"{n} мес.", cMonthly:"Ежемесячный платёж", cPrice:"Цена автомобиля", cDownAmt:"Первоначальный взнос", cLoan:"Сумма кредита", cTotal:"Всего выплат по кредиту", cOver:"Переплата (проценты)", cBarDown:"Взнос", cBarLoan:"Основной долг", cBarInt:"Проценты", calcLink:"Рассчитать кредит", calcNote:"Расчёт приблизительный (аннуитетные платежи). Реальные условия зависят от банка.",
-  videoT:"Рекламный ролик", videoS:"Посмотрите официальный бренд-фильм BMW.", videoCap:"BMW iX3: официальный бренд-фильм «The first of a new era»", videoOpen:"Открыть на YouTube", videoNote:"Если видео не открывается здесь, нажмите кнопку YouTube.",
+  cmpT:"Сравнение автомобилей", cmpS:"Выберите 2 или 3 автомобиля и сравните их характеристики рядом.", cmpNone:"— не выбрано —", cmpCar:"Автомобиль {n}", cmpBest:"Лучшее значение выделено зелёным.",
+  calcNav:"Рассрочка", calcT:"Калькулятор рассрочки", calcS:"Выберите автомобиль и рассчитайте ежемесячный платёж.", cCar:"Автомобиль", cDown:"Первоначальный взнос", cTerm:"Срок", cRate:"Годовая ставка", cMonths:"{n} мес.", cMonthly:"Ежемесячный платёж", cPrice:"Цена автомобиля", cDownAmt:"Первоначальный взнос", cLoan:"Сумма в рассрочку", cTotal:"Всего по рассрочке", cOver:"Переплата (наценка)", cBarDown:"Взнос", cBarLoan:"Сумма в рассрочку", cBarInt:"Наценка", calcLink:"Рассчитать рассрочку", calcNote:"Расчёт приблизительный. Реальные условия согласуются с продавцом.",
   photoCredit:"Фотографии автомобилей: Wikimedia Commons (открытые лицензии, авторы указаны на сайте-источнике).",
   searchPh:"Поиск автомобиля...", noResults:"Ничего не найдено. Попробуйте другое название.", details:"Подробнее",
   back:"Все автомобили", price:"Цена", monthly:"Около {m}/мес (рассрочка на 36 месяцев)", specsT:"Технические характеристики", similarT:"Похожие автомобили",
@@ -30,8 +30,8 @@ Object.assign(dict.ru, {
   desc_Elektr:"Бесшумный и экономичный электромобиль: ноль выбросов, мгновенный разгон и большой запас хода."
 });
 Object.assign(dict.en, {
-  calcNav:"Loan", calcT:"Loan calculator", calcS:"Pick a car and calculate your monthly payment.", cCar:"Car", cDown:"Down payment", cTerm:"Term", cRate:"Annual rate", cMonths:"{n} mo.", cMonthly:"Monthly payment", cPrice:"Car price", cDownAmt:"Down payment", cLoan:"Loan amount", cTotal:"Total loan payments", cOver:"Overpayment (interest)", cBarDown:"Down payment", cBarLoan:"Principal", cBarInt:"Interest", calcLink:"Calculate a loan", calcNote:"Estimate only (annuity payments). Actual terms depend on the bank.",
-  videoT:"Promo video", videoS:"Watch the official BMW brand film.", videoCap:"BMW iX3: official brand film “The first of a new era”", videoOpen:"Open on YouTube", videoNote:"If the video doesn't play here, use the YouTube button.",
+  cmpT:"Compare cars", cmpS:"Pick 2 or 3 cars and compare their specs side by side.", cmpNone:"— none —", cmpCar:"Car {n}", cmpBest:"The best value is highlighted in green.",
+  calcNav:"Installments", calcT:"Installment calculator", calcS:"Pick a car and calculate your monthly payment.", cCar:"Car", cDown:"Down payment", cTerm:"Term", cRate:"Annual rate", cMonths:"{n} mo.", cMonthly:"Monthly payment", cPrice:"Car price", cDownAmt:"Down payment", cLoan:"Amount paid in installments", cTotal:"Total installment payments", cOver:"Extra cost (markup)", cBarDown:"Down payment", cBarLoan:"Installment amount", cBarInt:"Markup", calcLink:"Calculate installments", calcNote:"Estimate only. Actual terms are agreed with the seller.",
   photoCredit:"Car photos: Wikimedia Commons (open licenses, authors credited on the source site).",
   searchPh:"Search cars...", noResults:"Nothing found. Try a different name.", details:"Details",
   back:"All cars", price:"Price", monthly:"About {m}/month (36-month plan)", specsT:"Specifications", similarT:"Similar cars",

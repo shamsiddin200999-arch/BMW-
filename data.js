@@ -46,6 +46,3 @@ const recentSales = [
 const featuredIds = [10, 7, 11, 3, 6];
 const TOTAL_SOLD = products.reduce((s, p) => s + p.sold, 0) + 690;
 
-// Reklama videosi (YouTube ID). Boshqa video qo'ymoqchi bo'lsangiz, shu yerda ID ni almashtiring.
-// Hozirgi video: BMW iX3 "The first of a new era" rasmiy brend filmi (BMW press-relizida ko'rsatilgan havola).
-const PROMO_VIDEO_ID = "qxPFC4OkeHw";

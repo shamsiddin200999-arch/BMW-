@@ -5,7 +5,7 @@ function renderDetail() {
   const box = $("#detail");
   const p = find(params.get("id"));
   if (!p) { box.innerHTML = `<a class="back" href="index.html#products">${ic("left")} ${t("back")}</a><p class="empty">${t("notFound")}</p>`; return; }
-  document.title = p.name + " · BMW Salon";
+  document.title = p.name + " · Bavaria Motors";
 
   const electric = p.fuel === "electric";
   const fuelKey = { petrol: "vPetrol", hybrid: "vHybrid", electric: "vElectric" }[p.fuel];
